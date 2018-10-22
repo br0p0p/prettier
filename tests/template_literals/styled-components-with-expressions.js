@@ -41,3 +41,24 @@ margin: 0;
 	left: 0;right: 0;
 }
 `;
+
+const globalStyle = createGlobalStyle`
+body {
+font-size: 12px;
+       color: white;
+  background-color: black;
+font-family: ${props => props.fontFamily || "Arial"};
+}
+
+* {
+  box-sizing: border-box;
+}
+`;
+
+const fadeIn = keyframes`
+  0% {
+opacity: 0   ;}
+  100% 
+{
+    opacity: 1;         }
+`;

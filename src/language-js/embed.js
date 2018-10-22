@@ -425,8 +425,14 @@ function isStyledComponents(path) {
       );
 
     case "Identifier":
-      // css``
-      return tag.name === "css";
+      return (
+        // css``
+        tag.name === "css" ||
+        // keyframes``
+        tag.name === "keyframes" ||
+        // createGlobalStyle``
+        tag.name === "createGlobalStyle"
+      );
 
     default:
       return false;
